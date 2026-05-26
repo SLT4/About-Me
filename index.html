@@ -1,36 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SLT | About Me</title>
-	<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.7.2/css/pro.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" href="images/SLT.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://kit-pro.fontawesome.com/releases/v7.2.0/css/pro.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v7.2.0/css/pro.min.css">
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<div class="background-wrapper">
-		<div id="stars"></div>
-		<div id="stars2"></div>
-		<div id="stars3"></div>
+	<div id="slt-loader">
+		<div class="loader-top"></div>
+		<div class="loader-bottom"></div>
+		<div class="loader-content">
+			<img src="images/SLT.png" class="loader-avatar" alt="Loading">
+		</div>
 	</div>
-	<div class="language-switch">
-		<button class="lang-btn" data-lang="en">EN</button>
-		<button class="lang-btn active" data-lang="ar">ع</button>
+	<div class="bg-grid-overlay"></div>
+	<header class="site-header">
+		<div class="header-logo">SLT</div>
+		<nav class="header-nav">
+			<a href="#about" data-ar="من أنا" data-en="About">من أنا</a>
+			<a href="#skills" data-ar="المهارات" data-en="Skills">المهارات</a>
+			<a href="#characters" data-ar="الشخصيات" data-en="Characters">الشخصيات</a>
+			<a href="#links" data-ar="الروابط" data-en="Links">الروابط</a>
+		</nav>
+		<div class="language-switch">
+			<button class="lang-btn" data-lang="en">EN</button>
+			<button class="lang-btn active" data-lang="ar">ع</button>
+		</div>
+	</header>
+
+	<main class="main-container">
+		<section id="about" class="hero-section">
+			<div class="hero-avatar-container">
+				<img src="images/SLT.png" class="hero-avatar" alt="SLT Avatar">
+			</div>
+			<h1 class="hero-title">SLT | سلطان</h1>
+			<p class="hero-bio"
+				data-ar="طالب جامعي متمكن في برمجة Lua وتطوير السيرفرات وتصميم واجهات المستخدم وتجربة المستخدم (UI/UX). لديه خبرة في مشاريع مجتمع FiveM."
+				data-en="University student skilled in Lua scripting, server development, and UI/UX design. Experienced in FiveM community projects.">
+				Text
+			</p>
+			<div class="badges-row">
+				<span class="badge badge-outline"><i class="fa-duotone fa-gamepad-modern"></i> FiveM Player</span>
+				<span class="badge badge-outline"><i class="fa-duotone fa-mug-hot"></i> Developer</span>
+				<span class="badge badge-outline"><i class="fa-duotone fa-video"></i> Streamer</span>
+			</div>
+		</section>
+
+		<section class="banner-grid">
+			<div class="banner-card">
+				<div class="banner-num">5+</div>
+				<div class="banner-label" data-ar="سنوات من الخبرة" data-en="Years of Experience">سنوات من الخبرة</div>
+			</div>
+			<div class="banner-card">
+				<div class="banner-num">4+</div>
+				<div class="banner-label" data-ar="سيرفرات تم تطويرها" data-en="Servers Developed">سيرفرات تم تطويرها
+				</div>
+			</div>
+			<div class="banner-card">
+				<div class="banner-num">3</div>
+				<div class="banner-label" data-ar="شخصيات" data-en="Characters">شخصيات
+				</div>
+			</div>
+		</section>
+
+		<section id="skills" class="section-container">
+			<div class="section-header">
+				<h2 class="section-title" data-ar="مهاراتي" data-en="Skills">
+					مهاراتي</h2>
+				<p class="section-subtitle"
+					data-ar="اللغات والخبرات اللي اعرفها في مجال البرمجه والتطوير."
+					data-en="Languages and experiences I have in the field of programming and development.">اللغات والخبرات اللي اعرفها في مجال البرمجه والتطوير.</p>
+			</div>
+			<div class="skills-grid" id="skillsContainer"></div>
+		</section>
+
+		<section id="characters" class="section-container">
+			<div class="section-header">
+				<h2 class="section-title" data-ar="شخصياتي" data-en="Characters">شخصياتي</h2>
+				<p class="section-subtitle"
+					data-ar="قائمة بشخصياتي البارزة التي ألعب بها في سيرفرات FiveM RP وتفاصيلها."
+					data-en="A directory of my prominent characters played in various FiveM RP servers.">قائمة بشخصياتي
+					البارزة التي ألعب بها في سيرفرات FiveM RP وتفاصيلها.</p>
+			</div>
+			<div class="characters-grid" id="charactersContainer"></div>
+		</section>
+
+		<section id="links" class="section-container">
+			<div class="section-header">
+				<h2 class="section-title" data-ar="روابط التواصل الاجتماعي" data-en="Social Links & Contact">روابط
+					التواصل الاجتماعي</h2>
+				<p class="section-subtitle"
+					data-ar="يمكنك متابعتي في منصات التواصل الاجتماعي ومعرفة كل ماهو جديد عني."
+					data-en="You can follow me on social media platforms to stay updated on my latest news."></p>
+			</div>
+			<div class="socials-list" id="socialsContainer"></div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<p>&copy; All rights reserved for SLT</p>
+	</footer>
+
+	<div class="dialog-overlay" id="charDialogOverlay">
+		<div class="dialog-panel" id="charDialogPanel">
+			<button class="dialog-close" id="charDialogClose" aria-label="Close">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+			<div class="dialog-scroll-body">
+				<div class="dialog-body" id="charDialogBody"></div>
+			</div>
+		</div>
 	</div>
-	<img src="SLT.png" class="profile-img">
-	<div class="about">
-		<h2>SLT</h2>
-		<p data-en="Senior high school student, interested in programming and streaming"
-			data-ar="طالب أخر سنه فالثانوي، مهتم بالبرمجه والستريمنق" class="about-text">طالب أخر سنه فالثانوي، مهتم
-			بالبرمجه والستريمنق</p>
+
+	<div class="lightbox-overlay" id="lightboxOverlay">
+		<button class="lightbox-close" id="lightboxClose">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+		<button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+			<i class="fa-solid fa-chevron-left"></i>
+		</button>
+		<img class="lightbox-img" id="lightboxImg" src="" alt="">
+		<button class="lightbox-nav lightbox-next" id="lightboxNext">
+			<i class="fa-solid fa-chevron-right"></i>
+		</button>
 	</div>
-	<div class="container-cards" id="socialCards"></div>
-	<div class="scroll-arrow">
-		<i class="fa-solid fa-chevron-down"></i>
-	</div>
+
+	<button id="backToTop" class="back-to-top" aria-label="Scroll to top">
+		<i class="fa-solid fa-arrow-up"></i>
+	</button>
+
 	<script src="js/main.js"></script>
 </body>
 
