@@ -1,35 +1,31 @@
 const skills = [
   {
-    nameAr: "لغة Lua (اللغة الأساسية)",
-    nameEn: "Lua (Main Language)",
+    name: "Lua (Main Language)",
     iconClass: "fa-solid fa-code",
     percent: 100,
-    descAr: "برمجة وتطوير سكربتات FiveM كاملة (خادم وعميل) بكفاءة عالية وبدون أخطاء.",
-    descEn: "Developing highly optimized client/server scripts and resources for FiveM."
+    descAr: "برمجة وتطوير سكربتات في فايف ام",
+    descEn: "Scripting and developing custom scripts for FiveM servers."
   },
   {
-    nameAr: "قواعد البيانات (SQL)",
-    nameEn: "SQL Databases",
+    name: "SQL Databases",
     iconClass: "fa-solid fa-database",
     percent: 100,
-    descAr: "تصميم وإدارة جداول قواعد البيانات وتحسين الاستعلامات والربط عبر oxmysql.",
-    descEn: "Designing databases, managing tables, and integrating queries via oxmysql."
+    descAr: "تصميم قواعد البيانات وإدارة الجداول",
+    descEn: "Designing database schemas and managing tables"
   },
   {
-    nameAr: "واجهات المستخدم NUI (HTML & CSS & JS Vanilla)",
-    nameEn: "NUI (Vanilla HTML & CSS & JS)",
+    name: "NUI (HTML & CSS & Vanilla JS)",
     iconClass: "fa-brands fa-html5",
     percent: 70,
-    descAr: "تصميم وبرمجة واجهات المستخدم داخل اللعبة وربطها بمنطق سكربتات السيرفر.",
-    descEn: "Creating lightweight web interfaces and panels integrated into FiveM scripts."
+    descAr: "خبرة بسيطه ومتواضعه في تصميم المواقع",
+    descEn: "Basic experience in designing custom websites"
   },
   {
-    nameAr: "تصميم MLO & Props في بليندر",
-    nameEn: "Blender (MLO & Props Design)",
+    name: "Blender (MLO & Props Design)",
     iconClass: "fa-solid fa-cube",
     percent: 95,
-    descAr: "تصميم وتعديل المجسمات ثلاثية الأبعاد والخرائط الخاصة بلعبة GTA V وسيرفرات FiveM.",
-    descEn: "Modeling, texturing, and designing custom maps/props in Blender for GTA V."
+    descAr: "تصميم مودلات بسيطه ومابات متواضعه في بلندر",
+    descEn: "Modeling, texturing, and designing custom maps/props in Blender"
   }
 ];
 
@@ -168,7 +164,7 @@ function renderSkills(lang) {
     const card = document.createElement('div');
     card.className = 'skill-card reveal';
 
-    const name = lang === 'ar' ? skill.nameAr : skill.nameEn;
+    const name = skill.name;
     const desc = lang === 'ar' ? skill.descAr : skill.descEn;
 
     card.innerHTML = `

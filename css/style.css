@@ -383,12 +383,14 @@ body.loading {
 
 /* ===== Skills ===== */
 .skills-grid {
+  direction: ltr;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(clamp(15rem, 22vw, 26rem), 1fr));
   gap: clamp(1rem, 1.5vw, 2rem);
 }
 
 .skill-card {
+  direction: ltr;
   background-color: var(--card);
   border: 0.0625rem solid var(--border);
   border-radius: var(--radius);
@@ -419,6 +421,7 @@ body.loading {
 }
 
 .skill-name {
+  font-family: var(--font-sans);
   font-size: clamp(0.95rem, 1.1vw, 1.25rem);
   font-weight: 600;
   color: var(--foreground);
